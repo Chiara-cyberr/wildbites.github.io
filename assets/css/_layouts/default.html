@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="/natura">Natura</a></li>
+      <li><a href="/biodiversita">Biodiversità</a></li>
+      <li><a href="/specie-insolite">Le specie insolite</a></li>
+      <li><a href="/consigli-lettura">Consigli di Lettura</a></li>
+      <li><a href="/natnews">#NatNews</a></li>
+      <li><a href="/wildbites">WildBites</a></li>
+      <li><a href="/shop">Shop</a></li>
+    </ul>
+  </nav>
+
+  <main style="padding: 20px; max-width: 900px; margin: auto;">
+    {{ content }}
+  </main>
+</body>
+</html>
