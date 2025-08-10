@@ -1,0 +1,65 @@
+body {
+  background-color: #f5f0e6; /* beige chiaro */
+  font-family: 'Georgia', serif;
+  color: #3b3a30; /* testo marrone scuro */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: #2a473d; /* verde scuro */
+  margin-top: 1em;
+}
+/* NAV MENU */
+
+nav {
+  position: relative;
+  background: #2a473d;
+  padding: 10px 15px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* MENU MOBILE (HAMBURGER) */
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #2a473d;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+}
